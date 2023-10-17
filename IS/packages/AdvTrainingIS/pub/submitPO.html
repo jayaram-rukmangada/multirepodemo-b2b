@@ -1,0 +1,53 @@
+<FORM action="http://localhost:5555/invoke/advTrainingIS.errorHandling/processPO" method=post>
+
+<H1>XML Form Submitter</H1>
+<I>URL = http://localhost:5555/invoke/advTrainingIS.errorHandling/processPO</I>
+<BR/>
+<BR/>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><INPUT type=Submit name="Submit XML" value=Submit>
+      <B><I><FONT color=white>&nbsp;&nbsp;XML:</FONT></I></B> </TD>
+  </TR>
+  <TR>
+    <TD><TEXTAREA cols=70 name=xmldata rows=25>
+<?xml version="1.0"?>
+<purchaseOrder orderDate="2001-02-02">
+  <header>
+    <PONumber>0001234</PONumber>
+    <shipTo>
+      <Attention>Theo Ezell</Attention>
+      <Addr1>100 Anywhere Street</Addr1>
+      <City>Nowhere</City>
+      <State>TX</State>
+      <Zip>72349-1023</Zip>
+    </shipTo>
+    <billTo>
+      <Attention>Doug Sheeran</Attention>
+      <Addr1>22 Elsewhere Blvd</Addr1>
+      <Addr2>Flat 23</Addr2>
+      <City>There</City>
+      <State>TX</State>
+      <Zip>72344</Zip>
+    </billTo>
+  </header>
+  <details>
+    <totalCost>148</totalCost>
+    <orderLineItems>
+      <unitCost>2</unitCost>
+      <desc>A cheap Item</desc>
+      <supplierPartID>1234</supplierPartID>
+      <quantity>2</quantity>
+    </orderLineItems>
+    <orderLineItems>
+      <unitCost>12</unitCost>
+      <desc>A more expensive one</desc>
+      <supplierPartID>99999</supplierPartID>
+      <quantity>12</quantity>
+    </orderLineItems>
+  </details>
+</purchaseOrder>
+    
+</TEXTAREA>
+    </TD></TR></TBODY></TABLE></FORM></BODY></HTML>

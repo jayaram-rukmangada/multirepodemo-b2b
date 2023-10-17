@@ -1,0 +1,6 @@
+PO,2001-12-28,A123,1234,Jane Doe,PREF
+SHIPTO,Theo Ezell\, Sr,123 Wilson St.,,Sacramento+CA+95833
+BILLTO,Phil DeCube,456 Nadia Ave.,Apartment #3,Seattle+WA+98188
+LINEITEM,12.50,Anvil,Hard12,3
+LINEITEM,4.56,Birdseed,Food34,12
+LINEITEM,34.55,Hammer,Hard13,3

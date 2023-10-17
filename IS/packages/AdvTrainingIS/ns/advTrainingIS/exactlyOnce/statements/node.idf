@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">advTrainingIS.exactlyOnce.statements</value>
+  <value name="is_public">false</value>
+  <value name="shared">cHVibGljIHN0YXRpYyBJRGF0YSBBbGxUcmFuc2FjdGlvbnMgPSBJRGF0YUZhY3RvcnkuY3JlYXRl
+KCk7CnB1YmxpYyBzdGF0aWMgRGF0ZSBHbG9iYWxEYXRlVGltZSA9IG51bGw7CnB1YmxpYyBzdGF0
+aWMgU3RyaW5nIEdsb2JhbERhdGVUaW1lU3RyID0gbnVsbDs=</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>java.io.*</value>
+    <value>java.util.*</value>
+    <value>java.text.*</value>
+  </array>
+</Values>

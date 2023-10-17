@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">checkBuyerIdentity</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">DQovLyBwaXBlbGluZQ0KSURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRD
+dXJzb3IoKTsNCglTdHJpbmcJQnV5ZXJJZGVudGl0eSA9IElEYXRhVXRpbC5nZXRTdHJpbmcoIHBp
+cGVsaW5lQ3Vyc29yLCAiQnV5ZXJJZGVudGl0eSIgKTsNCglpZiAoQnV5ZXJJZGVudGl0eS5lcXVh
+bHNJZ25vcmVDYXNlKCJGb3giKSl7DQoJCUlEYXRhVXRpbC5wdXQoIHBpcGVsaW5lQ3Vyc29yLCAi
+QnV5ZXJJZGVudGl0eSIsIEJ1eWVySWRlbnRpdHkudG9VcHBlckNhc2UoKSArICIgSU5EVVNUUklF
+UyIgKTsNCgl9IGVsc2Ugew0KCQlJRGF0YVV0aWwucHV0KCBwaXBlbGluZUN1cnNvciwgIkVycm9y
+TXNnIiwgIkludmFsaWQgQnV5ZXI6ICIgKyBCdXllcklkZW50aXR5ICk7DQoJfQ0KcGlwZWxpbmVD
+dXJzb3IuZGVzdHJveSgpOw0KCQ==</value>
+</Values>

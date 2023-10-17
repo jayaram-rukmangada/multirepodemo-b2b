@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.util.Values">
+    <value name="InData">PO,2001-12-28,A123,1234,Jane Doe,STND
+SHIPTO,Theo Ezell\, Sr,123 Wilson St.,,Sacramento+CA+95833
+BILLTO,Phil DeCube,456 Nadia Ave.,Apartment #3,Seattle+WA+98188
+LINEITEM,12.50,Anvil,Hard12,3
+LINEITEM,4.56,Birdseed,Food34,12
+LINEITEM,34.55,Hammer,Hard22,3</value>
+  </record>
+</IDataXMLCoder>

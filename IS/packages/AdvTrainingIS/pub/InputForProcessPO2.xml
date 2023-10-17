@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.util.Values">
+    <value name="xmldata">&lt;?xml version="1.0"?&gt;
+&lt;purchaseOrder orderDate="2001-02-02"&gt;
+  &lt;header&gt;
+    &lt;PONumber&gt;0001234&lt;/PONumber&gt;
+    &lt;shipTo&gt;
+      &lt;Attention&gt;Theo Ezell&lt;/Attention&gt;
+      &lt;Addr1&gt;100 Anywhere Street&lt;/Addr1&gt;
+      &lt;City&gt;Nowhere&lt;/City&gt;
+      &lt;State&gt;TX&lt;/State&gt;
+      &lt;Zip&gt;72349-1023&lt;/Zip&gt;
+    &lt;/shipTo&gt;
+    &lt;billTo&gt;
+      &lt;Attention&gt;Doug Sheeran&lt;/Attention&gt;
+      &lt;Addr1&gt;22 Elsewhere Blvd&lt;/Addr1&gt;
+      &lt;Addr2&gt;Flat 23&lt;/Addr2&gt;
+      &lt;City&gt;There&lt;/City&gt;
+      &lt;State&gt;TX&lt;/State&gt;
+      &lt;Zip&gt;72344&lt;/Zip&gt;
+    &lt;/billTo&gt;
+  &lt;/header&gt;
+  &lt;details&gt;
+    &lt;totalCost&gt;148&lt;/totalCost&gt;
+    &lt;orderLineItems&gt;
+      &lt;unitCost&gt;2&lt;/unitCost&gt;
+      &lt;desc&gt;A cheap Item&lt;/desc&gt;
+      &lt;supplierPartID&gt;1234&lt;/supplierPartID&gt;
+      &lt;quantity&gt;2&lt;/quantity&gt;
+    &lt;/orderLineItems&gt;
+    &lt;orderLineItems&gt;
+      &lt;unitCost&gt;12&lt;/unitCost&gt;
+      &lt;desc&gt;A more expensive one&lt;/desc&gt;
+      &lt;supplierPartID&gt;99999&lt;/supplierPartID&gt;
+      &lt;quantity&gt;12&lt;/quantity&gt;
+    &lt;/orderLineItems&gt;
+  &lt;/details&gt;
+&lt;/purchaseOrder&gt;</value>
+  </record>
+</IDataXMLCoder>

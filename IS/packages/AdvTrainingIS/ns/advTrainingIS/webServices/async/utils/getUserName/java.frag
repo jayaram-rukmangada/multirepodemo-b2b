@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getUserName</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">IAovLyBwaXBlbGluZQpJRGF0YUN1cnNvciBwaXBlbGluZUN1cnNvciA9IHBpcGVsaW5lLmdldEN1
+cnNvcigpOwoKICAJLy8gJHNlc3Npb24KCUlEYXRhCVRoZVNlc3Npb24gPSBJRGF0YVV0aWwuZ2V0
+SURhdGEoIHBpcGVsaW5lQ3Vyc29yLCAiJHNlc3Npb24iICk7CglpZiAoIFRoZVNlc3Npb24gIT0g
+bnVsbCkKCXsKICAgICAgICAgICBTZXNzaW9uIG15U2Vzc2lvbiA9IChTZXNzaW9uKSBUaGVTZXNz
+aW9uOwogICAgICAgICAgIFVzZXIgIG15VXNlciA9IG15U2Vzc2lvbi5nZXRVc2VyKCk7CiAgICAg
+ICAgICAgU3RyaW5nIG15VXNlck5hbWUgPSBteVVzZXIuZ2V0TmFtZSgpOwogICAgICAgICAgIElE
+YXRhVXRpbC5wdXQoIHBpcGVsaW5lQ3Vyc29yLCAiVXNlciIsIG15VXNlck5hbWUgKTsKCX0KcGlw
+ZWxpbmVDdXJzb3IuZGVzdHJveSgpOwoKCgoK</value>
+</Values>

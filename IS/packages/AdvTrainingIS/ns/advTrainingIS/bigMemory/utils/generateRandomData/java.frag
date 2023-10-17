@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">generateRandomData</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUNCklEYXRhQ3Vyc29yIHBpcGVsaW5lQ3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vy
+c29yKCk7DQoNClN0cmluZwlieXRlcyA9IElEYXRhVXRpbC5nZXRTdHJpbmcoIHBpcGVsaW5lQ3Vy
+c29yLCAiYnl0ZXMiICk7DQppbnQgbkJ5dGVzID0gSW50ZWdlci5wYXJzZUludChieXRlcyk7DQoN
+CnBpcGVsaW5lQ3Vyc29yLmRlc3Ryb3koKTsNCg0KLy8gcGlwZWxpbmUNCklEYXRhQ3Vyc29yIHBp
+cGVsaW5lQ3Vyc29yXzEgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsNCmJ5dGVbXSAgYmRhdGEgPSBu
+ZXcgYnl0ZVtuQnl0ZXNdOw0KQnl0ZVtdCUJkYXRhID0gbmV3IEJ5dGVbbkJ5dGVzXTsNCnJhbmRv
+bS5uZXh0Qnl0ZXMoYmRhdGEpOw0KZm9yIChpbnQgaSA9IDA7IGkgPCBCZGF0YS5sZW5ndGg7IGkr
+Kykgew0KCUJkYXRhW2ldID0gYmRhdGFbaV07DQp9DQpJRGF0YVV0aWwucHV0KCBwaXBlbGluZUN1
+cnNvcl8xLCAiZGF0YSIsIEJkYXRhICk7DQpwaXBlbGluZUN1cnNvcl8xLmRlc3Ryb3koKTsNCgk=
+</value>
+</Values>

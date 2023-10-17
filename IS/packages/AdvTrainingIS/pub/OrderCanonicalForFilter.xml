@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<OrderCanonicalForFilter>
+  <Header>
+    <Type>big</Type>
+    <OrderID>2</OrderID>
+    <TotalCost>232.50</TotalCost>
+    <Date>05/05/2018</Date>
+    <CustID>123</CustID>
+  </Header>
+  <Items>
+    <SKU>Anvil</SKU>
+    <Description>Black Heavy Duty</Description>
+    <Quantity>1</Quantity>
+    <LineItemCost>222.50</LineItemCost>
+  </Items>
+  <Items>
+    <SKU>Hammer</SKU>
+    <Description>Standard Steel</Description>
+    <Quantity>1</Quantity>
+    <LineItemCost>10.00</LineItemCost>
+  </Items>
+</OrderCanonicalForFilter>

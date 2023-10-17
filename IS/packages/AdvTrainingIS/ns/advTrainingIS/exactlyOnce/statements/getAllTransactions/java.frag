@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getAllTransactions</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUKSURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJz
+b3IoKTsKc3luY2hyb25pemVkKEFsbFRyYW5zYWN0aW9ucykgewogIElEYXRhQ3Vyc29yIEFsbFRy
+YW5zYWN0aW9uc0N1cnNvciA9IEFsbFRyYW5zYWN0aW9ucy5nZXRDdXJzb3IoKTsKICAvLyBpLlRy
+YW5zYWN0aW9uCiAgSURhdGFbXQlUcmFuc2FjdGlvbiA9IElEYXRhVXRpbC5nZXRJRGF0YUFycmF5
+KCBBbGxUcmFuc2FjdGlvbnNDdXJzb3IsICJUcmFuc2FjdGlvbiIgKTsKICBpZiAoIFRyYW5zYWN0
+aW9uICE9IG51bGwpIHsKICAgIElEYXRhVXRpbC5wdXQoIHBpcGVsaW5lQ3Vyc29yLCAiVHJhbnNh
+Y3Rpb25zIiwgVHJhbnNhY3Rpb24gKTsKICB9CiAgQWxsVHJhbnNhY3Rpb25zQ3Vyc29yLmRlc3Ry
+b3koKTsKfQpwaXBlbGluZUN1cnNvci5kZXN0cm95KCk7Cgo=</value>
+</Values>

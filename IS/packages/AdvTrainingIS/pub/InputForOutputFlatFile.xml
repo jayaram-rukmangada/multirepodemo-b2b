@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.util.Values">
+    <record name="PurchaseOrderFlat" javaclass="com.wm.data.ISMemDataImpl">
+      <record name="PO" javaclass="com.wm.data.ISMemDataImpl">
+        <value name="PO">PO</value>
+        <value name="OrderDate">2002-01-31</value>
+        <value name="PONum">123</value>
+        <value name="TotalCost">12.34</value>
+        <value name="POC">Road Runner</value>
+        <value name="CustType">STND</value>
+      </record>
+      <record name="SHIPTO" javaclass="com.wm.data.ISMemDataImpl">
+        <value name="ADDRESS">SHIPTO</value>
+        <value name="POC">Coyote</value>
+        <value name="Addr1">1 Sandstorm way</value>
+        <record name="CityStateZip" javaclass="com.wm.data.ISMemDataImpl">
+          <value name="City">Phoenix</value>
+          <value name="State">AZ</value>
+          <value name="Zip">89776</value>
+        </record>
+      </record>
+      <record name="BILLTO" javaclass="com.wm.data.ISMemDataImpl">
+        <value name="ADDRESS">BILLTO</value>
+        <value name="POC">Charles Warbucks, Sr</value>
+        <value name="Addr1">1 Mansion way</value>
+        <value name="Addr2">Penthouse</value>
+        <record name="CityStateZip" javaclass="com.wm.data.ISMemDataImpl">
+          <value name="City">BigBucks</value>
+          <value name="State">NY</value>
+          <value name="Zip">02312</value>
+        </record>
+      </record>
+      <array name="LINEITEM" type="record" depth="1">
+        <record javaclass="com.wm.data.ISMemDataImpl">
+          <value name="LINEITEM">LINEITEM</value>
+          <value name="UnitCost">12</value>
+          <value name="Desc">Anvil</value>
+          <value name="SupplierPartID">Hard12</value>
+          <value name="Quantity">2</value>
+        </record>
+        <record javaclass="com.wm.data.ISMemDataImpl">
+          <value name="LINEITEM">LINEITEM</value>
+          <value name="UnitCost">123</value>
+          <value name="Desc">Hammer</value>
+          <value name="SupplierPartID">Hard13</value>
+          <value name="Quantity">3</value>
+        </record>
+      </array>
+    </record>
+  </record>
+</IDataXMLCoder>

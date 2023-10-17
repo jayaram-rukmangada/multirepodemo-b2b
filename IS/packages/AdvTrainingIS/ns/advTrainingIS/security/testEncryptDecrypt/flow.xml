@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="advTrainingIS.security.encrypt:encryptCreditCard" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">XMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">false</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">origXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+          <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;order&gt;
+  &lt;shipping&gt;air&lt;/shipping&gt;
+  &lt;handlingPriority&gt;9&lt;/handlingPriority&gt;
+  &lt;creditCard&gt;
+    &lt;nameOnCard&gt;SvenjaNorton&lt;/nameOnCard&gt;
+    &lt;validUntil&gt;01/2010&lt;/validUntil&gt;
+    &lt;cardNumber&gt;5369814244686174&lt;/cardNumber&gt;
+    &lt;CVC&gt;012&lt;/CVC&gt;
+  &lt;/creditCard&gt;
+  &lt;customer&gt;
+    &lt;id&gt;7400&lt;/id&gt;
+  &lt;/customer&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;36.64&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9781584883470&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;34.17&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780691138718&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;17.66&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780812979183&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;19.39&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;0849385210&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+&lt;/order&gt;</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/origXMLData;1;0" TO="/XMLData;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+
+  <!-- nodes -->
+
+<MAPDELETE FIELD="/XMLData;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="advTrainingIS.security.decrypt:decryptCreditCard" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">false</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">origXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+          <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;order&gt;
+  &lt;shipping&gt;air&lt;/shipping&gt;
+  &lt;handlingPriority&gt;9&lt;/handlingPriority&gt;
+  &lt;creditCard&gt;
+    &lt;nameOnCard&gt;SvenjaNorton&lt;/nameOnCard&gt;
+    &lt;validUntil&gt;01/2010&lt;/validUntil&gt;
+    &lt;cardNumber&gt;5369814244686174&lt;/cardNumber&gt;
+    &lt;CVC&gt;012&lt;/CVC&gt;
+  &lt;/creditCard&gt;
+  &lt;customer&gt;
+    &lt;id&gt;7400&lt;/id&gt;
+  &lt;/customer&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;36.64&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9781584883470&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;34.17&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780691138718&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;17.66&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780812979183&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;19.39&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;0849385210&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+&lt;/order&gt;</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">encryptedXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">XMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">finalXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">XMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/XMLData;1;0" TO="/finalXMLData;1;0">
+</MAPCOPY>
+</MAP>
+</INVOKE>
+
+<BRANCH TIMEOUT="" SWITCH="/finalXMLData">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="$default" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>finalXMLData exists</COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="advTrainingIS.security.utils:stringCompare" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">str1</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">str2</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">XMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">false</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">origXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+          <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;order&gt;
+  &lt;shipping&gt;air&lt;/shipping&gt;
+  &lt;handlingPriority&gt;9&lt;/handlingPriority&gt;
+  &lt;creditCard&gt;
+    &lt;nameOnCard&gt;SvenjaNorton&lt;/nameOnCard&gt;
+    &lt;validUntil&gt;01/2010&lt;/validUntil&gt;
+    &lt;cardNumber&gt;5369814244686174&lt;/cardNumber&gt;
+    &lt;CVC&gt;012&lt;/CVC&gt;
+  &lt;/creditCard&gt;
+  &lt;customer&gt;
+    &lt;id&gt;7400&lt;/id&gt;
+  &lt;/customer&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;36.64&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9781584883470&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;34.17&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780691138718&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;17.66&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780812979183&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;19.39&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;0849385210&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+&lt;/order&gt;</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">encryptedXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">finalXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">DataUnchanged</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/origXMLData;1;0" TO="/str1;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/finalXMLData;1;0" TO="/str2;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<BRANCH TIMEOUT="" SWITCH="/compareVal">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="0" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>they are equal</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">str1</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">str2</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">XMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">false</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">origXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+          <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;order&gt;
+  &lt;shipping&gt;air&lt;/shipping&gt;
+  &lt;handlingPriority&gt;9&lt;/handlingPriority&gt;
+  &lt;creditCard&gt;
+    &lt;nameOnCard&gt;SvenjaNorton&lt;/nameOnCard&gt;
+    &lt;validUntil&gt;01/2010&lt;/validUntil&gt;
+    &lt;cardNumber&gt;5369814244686174&lt;/cardNumber&gt;
+    &lt;CVC&gt;012&lt;/CVC&gt;
+  &lt;/creditCard&gt;
+  &lt;customer&gt;
+    &lt;id&gt;7400&lt;/id&gt;
+  &lt;/customer&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;36.64&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9781584883470&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;34.17&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780691138718&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;17.66&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780812979183&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;19.39&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;0849385210&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+&lt;/order&gt;</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">encryptedXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">finalXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">DataUnchanged</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">compareVal</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/DataUnchanged;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">True</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_name">DataUnchanged</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP NAME="$default" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>they are different</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">str1</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">str2</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">XMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">false</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">origXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+          <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;order&gt;
+  &lt;shipping&gt;air&lt;/shipping&gt;
+  &lt;handlingPriority&gt;9&lt;/handlingPriority&gt;
+  &lt;creditCard&gt;
+    &lt;nameOnCard&gt;SvenjaNorton&lt;/nameOnCard&gt;
+    &lt;validUntil&gt;01/2010&lt;/validUntil&gt;
+    &lt;cardNumber&gt;5369814244686174&lt;/cardNumber&gt;
+    &lt;CVC&gt;012&lt;/CVC&gt;
+  &lt;/creditCard&gt;
+  &lt;customer&gt;
+    &lt;id&gt;7400&lt;/id&gt;
+  &lt;/customer&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;36.64&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9781584883470&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;34.17&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780691138718&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;17.66&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;9780812979183&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+  &lt;itemList&gt;
+    &lt;header&gt;
+      &lt;type&gt;book&lt;/type&gt;
+      &lt;units&gt;2&lt;/units&gt;
+      &lt;pricePerUnit&gt;19.39&lt;/pricePerUnit&gt;
+    &lt;/header&gt;
+    &lt;book&gt;
+      &lt;ISBN&gt;0849385210&lt;/ISBN&gt;
+    &lt;/book&gt;
+  &lt;/itemList&gt;
+&lt;/order&gt;</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">encryptedXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">finalXMLData</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">DataUnchanged</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">compareVal</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/DataUnchanged;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">false</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">DataUnchanged</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</BRANCH>
+</SEQUENCE>
+
+<MAP NAME="$null" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>do nothing</COMMENT>
+</MAP>
+</BRANCH>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPDELETE FIELD="/str2;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/str1;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/XMLData;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/compareVal;1;0">
+</MAPDELETE>
+</MAP>
+</FLOW>

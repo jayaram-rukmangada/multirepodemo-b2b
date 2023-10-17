@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="OrderCanonicalForFilter">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Header" nillable="true">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Type" nillable="true" type="xsd:string"/>
+              <xsd:element name="OrderID" nillable="true" type="xsd:string"/>
+              <xsd:element name="TotalCost" nillable="true">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:float">
+                    <xsd:minExclusive value="0.0"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="Date" nillable="true" type="xsd:string"/>
+              <xsd:element name="CustID" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Items" nillable="true" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="SKU" nillable="true" type="xsd:string"/>
+              <xsd:element name="Description" nillable="true" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Quantity" nillable="true">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:integer">
+                    <xsd:minInclusive value="1"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="LineItemCost" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="OrderCanonicalForFilter">
+    <xsd:sequence>
+      <xsd:element name="OrderCanonicalForFilter" nillable="true">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Header" nillable="true">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Type" nillable="true" type="xsd:string"/>
+                  <xsd:element name="OrderID" nillable="true" type="xsd:string"/>
+                  <xsd:element name="TotalCost" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:float">
+                        <xsd:minExclusive value="0.0"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Date" nillable="true" type="xsd:string"/>
+                  <xsd:element name="CustID" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Items" nillable="true" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="SKU" nillable="true" type="xsd:string"/>
+                  <xsd:element name="Description" nillable="true" type="xsd:string" minOccurs="0"/>
+                  <xsd:element name="Quantity" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:integer">
+                        <xsd:minInclusive value="1"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="LineItemCost" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
